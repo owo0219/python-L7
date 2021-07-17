@@ -1,0 +1,14 @@
+class Student:
+  def __init__(self,ID,name):
+    self.ID = ID
+    self.name = name
+
+n=int(input())
+students = []
+for i in range(n):
+  data = list(input().split())
+  students.append(Student(data[0],data[1]))
+students.sort(key=lambda s: (s.ID[8],s.ID[0]))
+for i in range(n):
+  print(students[i].ID[8],':',sep='',end=' ')
+  print(students[i].name)
